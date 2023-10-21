@@ -93,7 +93,7 @@ st.write("Loading model now")
 #model = joblib.load('model/keras_model.pkl')
 pickle_in = open('model/keras_model.pkl','rb')
 with open('model/keras_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+    model = joblib.load(file)
 
 #model =load_model('model/keras_model.h5')
 st.write("model loaded")
