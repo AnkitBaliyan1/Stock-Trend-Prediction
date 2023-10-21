@@ -83,12 +83,10 @@ y_test=np.array(y_test)
 
 
 
+
 st.write("Loading model now")
-
-
 # load my model
 model = joblib.load('model/keras_model.pkl')
-
 st.write("model loaded")
 
 
