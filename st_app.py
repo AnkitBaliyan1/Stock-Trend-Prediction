@@ -7,6 +7,7 @@ import yfinance as yf
 from sklearn.preprocessing import MinMaxScaler
 import joblib
 import pickle
+from tensorflow.keras.models import load_model
 
 
 
@@ -90,9 +91,7 @@ y_test=np.array(y_test)
 st.write("Loading model now")
 # load my model
 #model = joblib.load('model/keras_model.pkl')
-pickle_in = open('model/keras_model.pkl','rb')
-with open('model/keras_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+model = load_model('model/keras_model.h5')
 st.write("model loaded")
 
 
