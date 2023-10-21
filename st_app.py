@@ -51,8 +51,6 @@ st.pyplot(fig2)
 
 
 
-
-
 data_training = pd.DataFrame(df['Close'][0:int(len(df)*0.7)])
 data_testing = pd.DataFrame(df['Close'][int(len(df)*0.7):int(len(df))])
 
@@ -60,26 +58,6 @@ data_testing = pd.DataFrame(df['Close'][int(len(df)*0.7):int(len(df))])
 
 scaler = MinMaxScaler(feature_range=(0,1))
 data_training_array = scaler.fit_transform(data_training)
-
-
-
-
-x_train=[]
-y_train=[]
-
-for i in range(100,data_training_array.shape[0]):
-    x_train.append(data_training_array[i-100:i])
-    y_train.append(data_training_array[i,0])
-
-x_train, y_train = np.array(x_train),np.array(y_train)
-
-
-
-
-
-# load my model
-model = joblib.load('keras_model.pkl')
-
 
 
 
@@ -103,11 +81,23 @@ for i in range(100, input_data.shape[0]):
 x_test=np.array(x_test)
 y_test=np.array(y_test)
 
+
+
+st.write("Loading model now")
+
+
+# load my model
+model = joblib.load('model/keras_model.pkl')
+
+st.write("model loaded")
+
+
+
 y_predicted = model.predict(x_test)
 
 
 
-scale_factor = 1/scaler[0]
+scale_factor = 1/scaler.scale_
 y_predicted = y_predicted * scale_factor
 y_test = y_test * scale_factor
 
