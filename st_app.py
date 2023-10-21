@@ -90,14 +90,14 @@ y_test=np.array(y_test)
 
 st.write("Loading model now")
 # load my model
-#model = joblib.load('model/keras_model.pkl')
+model = joblib.load('model/keras_model.pkl')
 
 
 #with open('model/keras_model.pkl', 'rb') as file:
 #    model = joblib.load(file)
 
-with open('model/pickle.sav', 'rb') as file:
-    model = pickle.load(file)
+#with open('model/pickle.sav', 'rb') as file:
+#    model = pickle.load(file)
 
 #model =load_model('model/keras_model.h5')
 st.write("model loaded")
