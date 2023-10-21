@@ -1,13 +1,7 @@
-streamlit==1.27.2
+streamlit
 pandas
 numpy
-seaborn
 matplotlib
-plotly
-yfinance
-joblib
 scikit-learn
-#sklearn
 joblib
-#pickle
-
+yfinance
