@@ -82,32 +82,3 @@ x_test=np.array(x_test)
 y_test=np.array(y_test)
 
 
-
-
-st.write("Loading model now")
-# load my model
-model = joblib.load('model/keras_model.pkl')
-st.write("model loaded")
-
-
-
-y_predicted = model.predict(x_test)
-
-
-
-scale_factor = 1/scaler.scale_
-y_predicted = y_predicted * scale_factor
-y_test = y_test * scale_factor
-
-
-
-# final graph
-
-st.subheader("Predictions vs Original")
-fig2 = plt.figure(figsize=(12,6))
-plt.plot(y_test,'b', label='Original Price')
-plt.plot(y_predicted,'r',label='Predicted Price')
-plt.xlabel('Time')
-plt.ylabel('price')
-plt.legend()
-st.pyplot(fig2)
