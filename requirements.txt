@@ -4,8 +4,10 @@ numpy
 seaborn
 matplotlib
 plotly
+yfinance
 joblib
 scikit-learn
 #sklearn
 joblib
 #pickle
+
