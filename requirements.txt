@@ -6,6 +6,6 @@ matplotlib
 plotly
 joblib
 scikit-learn
-sklearn
+#sklearn
 joblib
 pickle
