@@ -91,8 +91,8 @@ st.write("Loading model now")
 # load my model
 #model = joblib.load('model/keras_model.pkl')
 pickle_in = open('model/keras_model.pkl','rb')
-with open('model/pickle.sav', 'rb') as file:
-    model = pickle.load(file)
+#with open('model/pickle.sav', 'rb') as file:
+model = pickle.load(pickle.sav)
 st.write("model loaded")
 
 
