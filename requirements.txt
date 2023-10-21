@@ -1,9 +1,9 @@
 streamlit==1.27.2
+pandas
 numpy
 seaborn
 matplotlib
 plotly
-pandas
 joblib
 scikit-learn
 sklearn
