@@ -124,3 +124,5 @@ plt.xlabel('Time')
 plt.ylabel('price')
 plt.legend()
 st.pyplot(fig2)
+
+
